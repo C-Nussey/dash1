@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DASHBOARD</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <!-- ...then load our CSS file that can overwrite any of the styles. -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+<!--   VUE APP   -->
+    <div id="app">
+      <link rel="stylesheet" v-bind:href="current_template.value">
+
+      <h1>{{ title }}</h1>
+        <!--      NAVIGATION       -->
+    <div class="parent2">
+        <template v-for="template in templates">
+            <div class="test1">
+              <i class="fa fa-sun-o fa-2x" v-on:click="setTemplate(template.id)"></i>
+            </div>
+        </template>
+      <template v-for="template in templates">
+          <div class="test2"><i class="fa fa-moon-o fa-2x" v-on:click="setTemplate(template.id == default_template)"></i></div>
+        </template>
+      <div class="mask2"><i class="fa fa-lightbulb-o fa-3x"></i></div>
+    </div>
+        
+<!--        TABLE           -->
+        
+    <table class="table">
+      <thead>
+        <tr>
+          <td><strong>VUE</strong></td>
+          <td><strong>YOU</strong></td>
+          <td><strong>DEVIL</strong></td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="row in rows">
+          <td><input type="text" v-model="row.name"></td>
+            <td><input type="text" v-model="row.surname"></td>
+          <td><input type="text" v-model="row.job"></td>
+          <td id="remove"><a @click="removeRow(row)">Remove</a></td> 
+        </tr>
+      </tbody>
+    </table>
+        
+    <div id="addrow">
+      <button class="button btn-primary" @click="addRow">Add row</button>
+    </div>
+
+        
+<!--        CHART         -->
+        
+        <div id="chart5" class="ct-chart"></div>
+        
+        <h4>Which one of these will ultimately kill me?</h4><br>
+        
+        <div class=containerinput>
+            <table class="chartinput">
+                <thead>
+                    <tr>
+                      <td><strong>A: scss</strong></td>
+                      <td><strong>B: vue.js</strong></td>
+                      <td><strong>C: Wordpress</strong></td>
+                      <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" placeholder="A" v-model="a"></td>
+                        <td><input type="number" placeholder="B" v-model="b"></td>
+                        <td><input type="number" placeholder="C" v-model="c"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+
+    </div>
+      
+      
+      
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-meta@1.2.0/lib/vue-meta.js"></script>
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="js/application.js"></script>
+  </body>
+</html>

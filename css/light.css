@@ -1,0 +1,13 @@
+@import url(vendor/normalize.css);
+@import url(vendor/skeleton.css);
+body {
+  color: #212121;
+  background-color: #cecece; }
+
+h1 {
+  color: #212121; }
+
+input::placeholder {
+  color: black; }
+
+/*# sourceMappingURL=light.css.map */

@@ -1,0 +1,14 @@
+@import 'base';
+
+body {
+  color: #212121;
+  background-color: #cecece;
+}
+
+h1 {
+  color: #212121;
+}
+
+input::placeholder {
+    color: black;
+}

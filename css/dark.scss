@@ -1,0 +1,21 @@
+@import 'base';
+
+body {
+  color: #cecece;
+  background-color: #212121;
+}
+
+h1 {
+  color: #cecece;
+}
+
+table {
+    input {
+        color: azure;
+        background-color: dimgray;
+    }
+}
+
+#remove {
+    cursor: pointer;
+}

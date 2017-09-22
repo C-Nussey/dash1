@@ -1,0 +1,12 @@
+@import url(vendor/normalize.css);
+@import url(vendor/skeleton.css);
+
+body {
+  background-size: cover;
+  background-color: #ffffff;
+  background-position: center; }
+
+body #pre-loader {
+  display: none; }
+
+/*# sourceMappingURL=application.css.map */
